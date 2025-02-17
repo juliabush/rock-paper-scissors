@@ -43,7 +43,170 @@
   #root, #__next {
     isolation: isolate;
   }
+  :root {
+    /* ### Neutral  */
+--clr-Dark-Text: hsl(229, 25%, 31%);
+--clr-Score-Text: hsl(229, 64%, 46%);
+--clr-Header-Outline: hsl(217, 16%, 45%);
+
+  }
   html, body {
   height: 100%;
+  font-family: 'Barlow Semi Condensed';
+  background: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+.game-components {
+    height: 100%;
+    display: grid;
+    padding: 1.5rem;
+}
+.score__big-box {
+    padding: 0.5rem;
+    border: 3px solid var(--clr-Header-Outline);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.game-logo {
+    padding: 0.5rem;
+    width: 100px;
+}
+.score__small-box {
+    padding: 0.4rem;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+    border-radius: 6px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+}
+.score {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--clr-Score-Text);
+}
+.score__number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--clr-Dark-Text);
+}
+.triangle-game__buttons {
+    place-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2.5rem;
+    column-gap: 4.5rem;
+    background-image: url(images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-size: 220px;
+    background-position: center;
+}
+.triangle-game__buttons button {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    display: flex;
+    place-content: center;
+    background-color: white;
+    cursor: pointer;
+}
+.triangle-game__buttons button img {
+    place-self: center;
+    width: 48px;
+}
+.rock__button {
+    position: relative;
+    left: 75%;
+}
+.paper__button {
+    border: 16px solid  hsl(230, 89%, 62%);
+    box-shadow: 0px 4px 0px hsl(230, 59%, 33%);
+}
+.scissors__button {
+    border: 16px solid  hsl(39, 89%, 49%);
+    box-shadow: 0px 4px 0px hsl(40, 75%, 30%);
+}
+.rock__button {
+    border: 16px solid hsl(349, 71%, 52%);
+    box-shadow: 0px 4px 0px hsl(349, 54%, 28%);
+}
+.game__rules-button {
+    justify-self: center;
+    align-self: flex-end;
+}
+.rules__button {
+    padding: 0.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    background-color: transparent;
+    text-transform: uppercase;
+    border: 3px solid var(--clr-Header-Outline);
+    border-radius: 0.5rem;
+    color: white;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+  .hidden {
+    display: none;
   }
-  
+@media(min-width:340px) and (max-width:375px) {
+    .triangle-game__buttons {
+        place-self: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 2.5rem;
+        column-gap: 2.5rem;
+        background-image: url(images/bg-triangle.svg);
+        background-repeat: no-repeat;
+        background-size: 220px;
+        background-position: center;
+    }
+    .triangle-game__buttons button {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        display: flex;
+        place-content: center;
+        background-color: white;
+        cursor: pointer;
+    }
+    .rock__button {
+        position: relative;
+        left: 65%;
+        bottom: 10%;
+    }
+}
+@media(min-width:375px) and (max-width:414px) {
+    .triangle-game__buttons {
+        place-self: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 3.5rem;
+        column-gap: 4rem;
+        background-image: url(images/bg-triangle.svg);
+        background-repeat: no-repeat;
+        background-size: 220px;
+        background-position: center;
+    }
+    .triangle-game__buttons button {
+        height: 130px;
+        width: 130px;
+        border-radius: 50%;
+        display: flex;
+        place-content: center;
+        background-color: white;
+        cursor: pointer;
+    }
+    .rock__button {
+        position: relative;
+        left: 75%;
+        bottom: 10%;
+    }
+}
