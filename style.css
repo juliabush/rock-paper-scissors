@@ -59,6 +59,7 @@
     height: 100%;
     display: grid;
     padding: 1.5rem;
+    justify-content: center;
 }
 .score__big-box {
     padding: 0.5rem;
