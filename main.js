@@ -7,9 +7,9 @@ const gameBody = document.getElementById("body");
 const rulesCloseButton = document.getElementById("rules-close-button");
 
 ruleButton.addEventListener("click", () => {
-    gameHeader.classList.add("hidden");
-    gameFooter.classList.add("hidden");
-    triangleGameButtons.classList.add("hidden");
+    gameHeader.classList.add("absolute");
+    gameFooter.classList.add("absolute");
+    triangleGameButtons.classList.add("absolute");
     document.getElementById('rules-section').style.display = 'grid';
     gameBody.classList.add('white');
 })

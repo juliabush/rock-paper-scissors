@@ -61,12 +61,16 @@
     padding: 1.5rem;
     justify-content: center;
 }
+.game__score-box {
+  justify-self: center;
+}
 .score__big-box {
     padding: 0.5rem;
     border: 3px solid var(--clr-Header-Outline);
     border-radius: 0.5rem;
     display: flex;
-    justify-content: space-between;
+    gap: 40vw;
+    /* justify-content: space-between; */
 }
 .game-logo {
     padding: 0.5rem;
@@ -157,11 +161,15 @@
   .hidden {
     display: none;
   }
+  .absolute {
+    position: absolute;
+  }
   .rules__section {
     display: none;
     background-color: white;
     text-align: center;
     justify-items: center;
+    z-index: 7;
   }
   .rules {
     text-transform: uppercase;
@@ -240,6 +248,11 @@
     .white {
       background: white;
     }
+}
+@media (min-width:414px) {
+  .rules__section {
+    /* height: 50%; */
+  }
 }
 .hidden {
   display: none;
