@@ -69,7 +69,7 @@
     border: 3px solid var(--clr-Header-Outline);
     border-radius: 0.5rem;
     display: flex;
-    gap: 40vw;
+    gap: 30vw;
     /* justify-content: space-between; */
 }
 .game-logo {
@@ -90,7 +90,7 @@
 .score {
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: 700;
     color: var(--clr-Score-Text);
 }
@@ -166,6 +166,7 @@
   }
   .rules__section {
     display: none;
+    /* flex-direction: column; */
     background-color: white;
     text-align: center;
     justify-items: center;
@@ -177,10 +178,11 @@
     place-self: center;
     font-weight: 600;
     color: var(--clr-Dark-Text);
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     margin-top: 2rem;
   }
   .rules-close-button{
+    place-self: center;
     display: grid;
     place-content: center;
     border: 4px solid rgba(0, 0, 0, 0.534);
@@ -188,6 +190,7 @@
     border-radius: 50%;
     width: 60px;
     height: 60px;
+    margin-top: 3rem;
   }
 @media(min-width:340px) and (max-width:375px) {
     .triangle-game__buttons {
@@ -219,7 +222,7 @@
       background: white;
     }
 }
-@media(min-width:375px) and (max-width:414px) {
+@media(min-width:375px) and (max-width:460px) {
     .triangle-game__buttons {
         place-self: center;
         display: grid;
@@ -249,10 +252,80 @@
       background: white;
     }
 }
-@media (min-width:414px) {
+@media (min-width:460px) {
   .rules__section {
-    /* height: 50%; */
+    padding: 1rem;
+    place-self: center;
+    width: 420px;
+    height: 420px;
+    grid-template-rows: 100px 400px;
+    border-radius: 0.5rem;
   }
+  .rules-close-button {
+    grid-row: 1;
+    position: relative;
+    bottom: 40px;
+  }
+  .rules {
+    grid-row: 1;
+    position: relative;
+    right: 100px;
+    top: 6px;
+  }
+  .rule-image{
+   position: relative;
+   left: 35px;
+  }
+  .triangle-game__buttons {
+    place-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 3.5rem;
+    column-gap: 5.5rem;
+    background-image: url(images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-size: 260px;
+    background-position: center;
+    margin-top: 4rem;
+}
+.triangle-game__buttons button {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  display: flex;
+  place-content: center;
+  background-color: white;
+  cursor: pointer;
+}
+.game-logo {
+  width: 140px;
+}
+.score__small-box {
+  padding: 0.6rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.score {
+  font-size: 1.2rem;
+}
+.score__number {
+  font-size: 3.5rem;
+}
+}
+@media (min-width:800px) {
+  .triangle-game__buttons {
+    margin-top: 8rem;
+  }
+.game__rules-button {
+  justify-self: center;
+  align-self: flex-end;
+  display: flex;
+  width: 100%;
+  place-content: end;
+}
+.rules__button {
+  margin-right: 3rem;
+}
 }
 .hidden {
   display: none;
