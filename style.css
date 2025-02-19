@@ -157,6 +157,30 @@
   .hidden {
     display: none;
   }
+  .rules__section {
+    display: none;
+    background-color: white;
+    text-align: center;
+    justify-items: center;
+  }
+  .rules {
+    text-transform: uppercase;
+    font-size: 2rem;
+    place-self: center;
+    font-weight: 600;
+    color: var(--clr-Dark-Text);
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  .rules-close-button{
+    display: grid;
+    place-content: center;
+    border: 4px solid rgba(0, 0, 0, 0.534);
+    background-color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
 @media(min-width:340px) and (max-width:375px) {
     .triangle-game__buttons {
         place-self: center;
@@ -182,6 +206,9 @@
         position: relative;
         left: 65%;
         bottom: 10%;
+    }
+    .white {
+      background: white;
     }
 }
 @media(min-width:375px) and (max-width:414px) {
@@ -210,4 +237,10 @@
         left: 75%;
         bottom: 10%;
     }
+    .white {
+      background: white;
+    }
+}
+.hidden {
+  display: none;
 }

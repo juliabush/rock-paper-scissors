@@ -7,12 +7,14 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script defer src="main.js"></script>
   <title>Julia | Rock, Paper, Scissors</title>
-
+</head>
+<body id="body">
   <main class="game-components">
-    <header class="game__score-box">
+    <header class="game__score-box" id="header">
       <div class="score__big-box">
         <img class="game-logo" src="/images/logo.svg" alt="Logo with text Rock, Paper, Scissors">
         <div class="score__small-box">
@@ -21,16 +23,20 @@
         </div>
       </div>
     </header>
-    <div class="triangle-game__buttons">
+    <div class="triangle-game__buttons" id="tri">
       <button class="paper__button"><img src="/images/icon-paper.svg" alt="Button to choose Paper"></button>
       <button class="scissors__button"><img src="/images/icon-scissors.svg" alt="Button to choose Scissors"></button>
       <button class="rock__button"><img src="/images/icon-rock.svg" alt="Button to choose Rock"></button>
     </div>
-    <footer class="game__rules-button">
+    <footer class="game__rules-button" id="footer">
       <button class="rules__button" id="rule-button">Rules</button>
     </footer>
+    <section class="rules__section" id="rules-section">
+      <p class="rules">rules</p>
+      <img src="/images/image-rules.svg" alt="Instructions for Rock, Scissors and Paper Game. Rock beats scissors, scissors beats paper and paper beats rock.">
+      <button class="rules-close-button" id="rules-close-button"><img src="/images/icon-close.svg" alt="Button to close rule page"></button>
+    </section>
     <div class="hidden">
-    
       You Picked
       The House Picked
     
@@ -40,9 +46,5 @@
       Play Again
     </div>
   </main>
-
-  
-</head>
-<body>
 </body>
 </html>
