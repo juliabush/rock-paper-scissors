@@ -314,7 +314,7 @@
 }
 @media (min-width:800px) {
   .triangle-game__buttons {
-    margin-top: 8rem;
+    margin-top: 7rem;
   }
 .game__rules-button {
   justify-self: center;
