@@ -10,7 +10,9 @@ ruleButton.addEventListener("click", () => {
     // gameHeader.classList.add("absolute");
     // gameFooter.classList.add("absolute");
     // triangleGameButtons.classList.add("absolute");
+    document.getElementById('rules-section').setAttribute("open", "");
     document.getElementById('rules-section').style.display = 'grid';
+    document.getElementById('body').setAttribute("dark", "");
     gameBody.classList.add('white');
 })
 
@@ -18,6 +20,8 @@ rulesCloseButton.addEventListener("click", () => {
     gameHeader.classList.remove("hidden");
     gameFooter.classList.remove("hidden");
     triangleGameButtons.classList.remove("hidden");
+    document.getElementById('rules-section').removeAttribute("open");
+    document.getElementById('body').removeAttribute("dark");
     document.getElementById('rules-section').style.display = 'none';
     gameBody.classList.remove('white');
 })
