@@ -5,6 +5,9 @@ const gameFooter = document.getElementById("footer");
 const triangleGameButtons = document.getElementById("tri");
 const gameBody = document.getElementById("body");
 const rulesCloseButton = document.getElementById("rules-close-button");
+const paperButton = document.getElementById("paper");
+const scissorButton = document.getElementById("scissors");
+const rockButton = document.getElementById("rock");
 
 ruleButton.addEventListener("click", () => {
     // gameHeader.classList.add("absolute");
@@ -12,7 +15,6 @@ ruleButton.addEventListener("click", () => {
     // triangleGameButtons.classList.add("absolute");
     document.getElementById('rules-section').setAttribute("open", "");
     document.getElementById('rules-section').style.display = 'grid';
-    document.getElementById('body').setAttribute("dark", "");
     gameBody.classList.add('white');
 })
 
@@ -21,7 +23,6 @@ rulesCloseButton.addEventListener("click", () => {
     gameFooter.classList.remove("hidden");
     triangleGameButtons.classList.remove("hidden");
     document.getElementById('rules-section').removeAttribute("open");
-    document.getElementById('body').removeAttribute("dark");
     document.getElementById('rules-section').style.display = 'none';
     gameBody.classList.remove('white');
 })
@@ -39,4 +40,17 @@ function toggleElements() {
     }
 }
 ruleButton.addEventListener("click", toggleElements);
-rulesCloseButton.addEventListener("click", toggleElements)
+rulesCloseButton.addEventListener("click", toggleElements);
+
+paperButton.addEventListener("click", () => {
+    triangleGameButtons.classList.add("hidden");
+    localStorage.setItem("selectedOption", "paper");
+})
+scissorButton.addEventListener("click", () => {
+    triangleGameButtons.classList.add("hidden");
+    localStorage.setItem("selectedOption", "scissors");
+})
+rockButton.addEventListener("click", () => {
+    triangleGameButtons.classList.add("hidden");
+    localStorage.setItem("selectedOption", "rock");
+})

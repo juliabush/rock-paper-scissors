@@ -213,6 +213,7 @@
     width: 60px;
     height: 60px;
     margin-top: 3rem;
+    cursor: pointer;
   }
 @media(min-width:340px) and (max-width:375px) {
     .triangle-game__buttons {
