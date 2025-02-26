@@ -15,6 +15,8 @@ const rockUserPick = document.getElementById("rock-userpick");
 const paperCompPick = document.getElementById("paper-comppick")
 const scissorCompPick = document.getElementById("scissors-comppick");
 const rockCompPick = document.getElementById("rock-comppick");
+let computerChoice
+let userChoice
 
 ruleButton.addEventListener("click", () => {
     // gameHeader.classList.add("absolute");
