@@ -218,7 +218,7 @@
   }
   .results__section {
     visibility: hidden;
-    margin-top: 35%;
+    margin-top: 33%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 3rem;
@@ -434,6 +434,9 @@
 }
 .rules__button {
   margin-right: 3rem;
+}
+.rules__section {
+  margin-top: 7rem;
 }
 }
 .hidden {
