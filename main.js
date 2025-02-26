@@ -12,6 +12,9 @@ const resultSection = document.getElementById("results-section");
 const paperUserPick = document.getElementById("paper-userpick");
 const scissorUserPick = document.getElementById("scissors-userpick");
 const rockUserPick = document.getElementById("rock-userpick");
+const paperCompPick = document.getElementById("paper-comppick")
+const scissorCompPick = document.getElementById("scissors-comppick");
+const rockCompPick = document.getElementById("rock-comppick");
 
 ruleButton.addEventListener("click", () => {
     // gameHeader.classList.add("absolute");
@@ -51,16 +54,35 @@ paperButton.addEventListener("click", () => {
     resultSection.classList.add("visible");
     scissorUserPick.classList.add("invisible");
     rockUserPick.classList.add("invisible");
+    setTimeout(generateComputerChoice, 500);
 })
 scissorButton.addEventListener("click", () => {
     triangleGameButtons.classList.add("hidden");
     resultSection.classList.add("visible");
     paperUserPick.classList.add("invisible");
     rockUserPick.classList.add("invisible");
+    setTimeout(generateComputerChoice, 500);
 })
 rockButton.addEventListener("click", () => {
     triangleGameButtons.classList.add("hidden");
     resultSection.classList.add("visible");
     scissorUserPick.classList.add("invisible");
     paperUserPick.classList.add("invisible");
+    setTimeout(generateComputerChoice, 500);
 })
+function generateComputerChoice() {
+    const randomNumber = Math.floor(Math.random() * 3) + 1
+
+    if (randomNumber === 1) {
+        // display rock
+        rockCompPick.classList.remove("compchoice");
+    }
+    if (randomNumber === 2) {
+        // display paper
+        paperCompPick.classList.remove("compchoice");
+    }
+    if (randomNumber === 3) {
+        // display scissor
+        scissorCompPick.classList.remove("compchoice");
+    }
+}
