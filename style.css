@@ -54,6 +54,7 @@
   height: 100%;
   font-family: 'Barlow Semi Condensed';
   background: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    overflow: hidden;
 }
 .game-components {
     height: 100%;
@@ -123,7 +124,7 @@
     place-self: center;
     width: 48px;
 }
-.rock__button {
+.triangle-game__buttons .rock__button {
     position: relative;
     left: 75%;
 }
@@ -215,6 +216,67 @@
     margin-top: 3rem;
     cursor: pointer;
   }
+  .results__section {
+    visibility: hidden;
+    margin-top: 35%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+  }
+  .visible {
+    visibility: visible;
+  }
+  .results__section button {
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    display: flex;
+    place-content: center;
+    background-color: white;
+    cursor: pointer;
+  }
+  .results__section button img {
+    place-self: center;
+    width: 72px;
+}
+.column-1, .column-2 {
+  justify-items: center;
+}
+.column-2 {
+  margin-left: 0.5rem;
+}
+.result-text {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+.results__section .scissors__button {
+  position: relative;
+  z-index: 2;
+  bottom: 240px;
+}
+.results__section .rock__button {
+  position: relative;
+  z-index: 3;
+  bottom: 480px;
+}
+.result-text {
+  font-weight: 700;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.623) 1px 2px;
+}
+.results__section .paper__button {
+  border: 28px solid  hsl(230, 89%, 62%);
+  box-shadow: 0px 8px 0px hsl(230, 59%, 33%), inset 0px 8px 0px rgba(44, 44, 44, 0.2);
+}
+.results__section .scissors__button {
+  border: 28px solid  hsl(39, 89%, 49%);
+  box-shadow: 0px 8px 0px hsl(40, 75%, 30%), inset 0px 8px 0px rgba(44, 44, 44, 0.2);
+}
+.results__section .rock__button {
+  border: 28px solid hsl(349, 71%, 52%);
+  box-shadow: 0px 8px 0px hsl(349, 54%, 28%), inset 0px 8px 0px rgba(44, 44, 44, 0.2);
+}
 @media(min-width:340px) and (max-width:375px) {
     .triangle-game__buttons {
         place-self: center;

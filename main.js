@@ -8,6 +8,7 @@ const rulesCloseButton = document.getElementById("rules-close-button");
 const paperButton = document.getElementById("paper");
 const scissorButton = document.getElementById("scissors");
 const rockButton = document.getElementById("rock");
+const resultSection = document.getElementById("results-section");
 
 ruleButton.addEventListener("click", () => {
     // gameHeader.classList.add("absolute");
@@ -44,13 +45,13 @@ rulesCloseButton.addEventListener("click", toggleElements);
 
 paperButton.addEventListener("click", () => {
     triangleGameButtons.classList.add("hidden");
-    localStorage.setItem("selectedOption", "paper");
+    resultSection.classList.add("visible");
 })
 scissorButton.addEventListener("click", () => {
     triangleGameButtons.classList.add("hidden");
-    localStorage.setItem("selectedOption", "scissors");
+    resultSection.classList.add("visible");
 })
 rockButton.addEventListener("click", () => {
     triangleGameButtons.classList.add("hidden");
-    localStorage.setItem("selectedOption", "rock");
+    resultSection.classList.add("visible");
 })
