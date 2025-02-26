@@ -232,7 +232,7 @@
     border-radius: 50%;
     display: flex;
     place-content: center;
-    background-color: white;
+    /* background-color: white; */
     cursor: pointer;
   }
   .results__section button img {
@@ -249,6 +249,7 @@
   font-size: 1.5rem;
   text-transform: uppercase;
   margin-bottom: 3rem;
+  letter-spacing: 1px;
 }
 .results__section .scissors__button {
   position: relative;
@@ -276,6 +277,18 @@
 .results__section .rock__button {
   border: 28px solid hsl(349, 71%, 52%);
   box-shadow: 0px 8px 0px hsl(349, 54%, 28%), inset 0px 8px 0px rgba(44, 44, 44, 0.2);
+}
+.invisible {
+  visibility: hidden;
+}
+.compchoice {
+  visibility: hidden;
+}
+.blank__button {
+ background-color:  hsla(238, 48%, 15%, 0.61);
+ border: none;
+ position: relative;
+ bottom: 720px
 }
 @media(min-width:340px) and (max-width:375px) {
     .triangle-game__buttons {

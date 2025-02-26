@@ -9,6 +9,9 @@ const paperButton = document.getElementById("paper");
 const scissorButton = document.getElementById("scissors");
 const rockButton = document.getElementById("rock");
 const resultSection = document.getElementById("results-section");
+const paperUserPick = document.getElementById("paper-userpick");
+const scissorUserPick = document.getElementById("scissors-userpick");
+const rockUserPick = document.getElementById("rock-userpick");
 
 ruleButton.addEventListener("click", () => {
     // gameHeader.classList.add("absolute");
@@ -46,12 +49,18 @@ rulesCloseButton.addEventListener("click", toggleElements);
 paperButton.addEventListener("click", () => {
     triangleGameButtons.classList.add("hidden");
     resultSection.classList.add("visible");
+    scissorUserPick.classList.add("invisible");
+    rockUserPick.classList.add("invisible");
 })
 scissorButton.addEventListener("click", () => {
     triangleGameButtons.classList.add("hidden");
     resultSection.classList.add("visible");
+    paperUserPick.classList.add("invisible");
+    rockUserPick.classList.add("invisible");
 })
 rockButton.addEventListener("click", () => {
     triangleGameButtons.classList.add("hidden");
     resultSection.classList.add("visible");
+    scissorUserPick.classList.add("invisible");
+    paperUserPick.classList.add("invisible");
 })
