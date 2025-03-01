@@ -15,6 +15,7 @@ const rockUserPick = document.getElementById("rock-userpick");
 const paperCompPick = document.getElementById("paper-comppick")
 const scissorCompPick = document.getElementById("scissors-comppick");
 const rockCompPick = document.getElementById("rock-comppick");
+const tieResult = document.getElementById("tie-result");
 let computerChoice
 let userChoice
 
@@ -56,6 +57,7 @@ paperButton.addEventListener("click", () => {
     resultSection.classList.add("visible");
     scissorUserPick.classList.add("invisible");
     rockUserPick.classList.add("invisible");
+    userChoice = "paper";
     setTimeout(generateComputerChoice, 500);
 })
 scissorButton.addEventListener("click", () => {
@@ -63,6 +65,7 @@ scissorButton.addEventListener("click", () => {
     resultSection.classList.add("visible");
     paperUserPick.classList.add("invisible");
     rockUserPick.classList.add("invisible");
+    userChoice = "scissors";
     setTimeout(generateComputerChoice, 500);
 })
 rockButton.addEventListener("click", () => {
@@ -70,6 +73,7 @@ rockButton.addEventListener("click", () => {
     resultSection.classList.add("visible");
     scissorUserPick.classList.add("invisible");
     paperUserPick.classList.add("invisible");
+    userChoice = "rock";
     setTimeout(generateComputerChoice, 500);
 })
 function generateComputerChoice() {
@@ -78,13 +82,22 @@ function generateComputerChoice() {
     if (randomNumber === 1) {
         // display rock
         rockCompPick.classList.remove("compchoice");
+        computerChoice = "rock";
     }
     if (randomNumber === 2) {
         // display paper
         paperCompPick.classList.remove("compchoice");
+        computerChoice = "paper";
     }
     if (randomNumber === 3) {
         // display scissor
         scissorCompPick.classList.remove("compchoice");
+        computerChoice = "scissor";
+    }
+}
+function getResult() {
+    if (computerChoice === userChoice) {
+        // this results in a tie
+        tieResult.classList.add("visible");
     }
 }

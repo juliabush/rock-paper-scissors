@@ -218,10 +218,14 @@
   }
   .results__section {
     visibility: hidden;
-    margin-top: 33%;
+    margin-top: 20%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 3rem;
+    column-gap: 18rem;
+  }
+  .results__section .response {
+    margin-top: 20%;
+    column-gap: 18rem;
   }
   .visible {
     visibility: visible;
@@ -295,6 +299,53 @@
 .compchoice {
   visibility: hidden;
 }
+.tie-result__section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: absolute;
+  visibility: hidden;
+  left: 41%;
+  top: 55%;
+  text-align: center;
+  }
+  .win-result__section {
+    position: absolute;
+    visibility: hidden;
+    left: 44%;
+    top: 55%;
+    text-align: center;
+  }
+  .loss-result__section {
+    position: absolute;
+    visibility: hidden;
+    left: 44%;
+    top: 55%;
+    text-align: center;
+  }
+  .rtitle {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: white;
+  }
+  .again-button {
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .again-button:hover {
+    color: rgb(236, 48, 15);
+  }
+  .visible {
+    visibility: visible;
+  }
 @media(min-width:320px) and (max-width:375px) {
     .triangle-game__buttons {
         place-self: center;
